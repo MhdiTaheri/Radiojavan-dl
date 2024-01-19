@@ -1,11 +1,13 @@
 import os
 import requests
+from telebot import types
 from telebot import TeleBot
 from radiojavanapi import Client
 from moviepy.editor import VideoFileClip
 
-bot = TeleBot('BOT_TOKEN') #<---- توکن ربات شما
-channel_username = 'CHANNEL_ID' # <------- آیدی چنل شما با @
+bot = TeleBot('BOT_TOKEN') # <----- توکن ربات شما
+channel_username = "CHANNEL_ID" # <------ آیدی چنل اسپانسری
+bot_username = "BOT_USERNAME" # <------ یوزر نیم ربات
 
 def check_channel_membership(user_id):
     chat_member = bot.get_chat_member(channel_username, user_id)
@@ -14,7 +16,16 @@ def check_channel_membership(user_id):
 def verify_commands(message):
     user_id = message.from_user.id
     if not check_channel_membership(user_id):
-        bot.reply_to(message, "You need to join the channel first.")
+        channel_username_cleaned = channel_username.lstrip('@')
+        keyboard = types.InlineKeyboardMarkup()
+        
+        url_button = types.InlineKeyboardButton(text="🔗 عضویت در کانال", url=f"https://t.me/{channel_username_cleaned}")
+        keyboard.add(url_button)
+
+        url_button2 = types.InlineKeyboardButton(text="عضو شدم ✅", url=f"https://t.me/{bot_username}?start=welcome")
+        keyboard.add(url_button2)
+
+        bot.reply_to(message, f"▫️شما در کانال اسپانسر عضو نیستید\nعضو شوید و سپس /start را بفرستید", reply_markup=keyboard)
         return "Nist"
 
 @bot.message_handler(commands=['start','help'])
