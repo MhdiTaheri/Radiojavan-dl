@@ -1,3 +1,10 @@
+## Radiojavan-dl
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/MhdiTaheri/Radiojavan-dl)
+[![GPL-3.0 License](https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge)](./LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/MhdiTaheri/Radiojavan-dl?style=for-the-badge)](https://github.com/MhdiTaheri/Radiojavan-dl/issues)
+[![GitHub stars](https://img.shields.io/github/stars/MhdiTaheri/Radiojavan-dl?style=for-the-badge)](https://github.com/MhdiTaheri/Radiojavan-dl/stargazers)
+![GitHub forks](https://img.shields.io/github/forks/MhdiTaheri/Radiojavan-dl?style=for-the-badge)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/MhdiTaheri/Radiojavan-dl?style=for-the-badge)](https://github.com/MhdiTaheri/Radiojavan-dl/pulls)
 # نصب
 ```bash
 git clone https://github.com/MhdiTaheri/Radiojavan-dl.git
