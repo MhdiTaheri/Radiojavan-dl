@@ -9,7 +9,7 @@ git clone https://github.com/MhdiTaheri/Radiojavan-dl.git
 cd Radiojavan-dl
 ```
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 بعد از نصب اولیه لاین های 8 9 10 رو ادیت کنید :
 <br>
